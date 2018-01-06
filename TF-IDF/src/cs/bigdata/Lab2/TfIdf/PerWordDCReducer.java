@@ -17,24 +17,24 @@ public class PerWordDCReducer extends Reducer<Text, Text, Text, Text> {
 
 	 @Override
 	 protected void reduce(Text key, Iterable<Text> values, Context context) throws IOException, InterruptedException {
-	        // get the number of documents indirectly from the file-system (stored in the job name on purpose)
+	        // Le nombre de document est transmis via le contexte
 			Configuration conf = context.getConfiguration();
 			String strProp = conf.get("numberOfDocs");
-			Integer numberOfDocumentsInCorpus = Integer.valueOf(strProp);
+			Integer numberOfDoc = Integer.valueOf(strProp);
 			// total frequency of this word
-	        int numberOfDocumentsInCorpusWhereKeyAppears = 0;
-	        Hashtable<String, String> tempFrequencies = new Hashtable<String, String>();
+	        int docNumberWithKey = 0;
+	        Hashtable<String, String> tmpFreq = new Hashtable<String, String>();
 	        for (Text val : values) {
-	            String[] documentAndFrequencies = val.toString().split("=");
-	            numberOfDocumentsInCorpusWhereKeyAppears++;
-	            tempFrequencies.put(documentAndFrequencies[0], documentAndFrequencies[1]);
+	            String[] docAndFreq = val.toString().split("=");
+	            docNumberWithKey++;
+	            tmpFreq.put(docAndFreq[0], docAndFreq[1]);
 	        }
-	        for (String document : tempFrequencies.keySet()) {
-	            String[] wordFrequenceAndTotalWords = tempFrequencies.get(document).split("/");
+	        for (String document : tmpFreq.keySet()) {
+	            String[] wordFreqTotalSplit = tmpFreq.get(document).split("/");
 	 
-	            double tf = Double.valueOf(Double.valueOf(wordFrequenceAndTotalWords[0])/ Double.valueOf(wordFrequenceAndTotalWords[1])); //tf ~ term frequency
+	            double tf = Double.valueOf(Double.valueOf(wordFreqTotalSplit[0])/ Double.valueOf(wordFreqTotalSplit[1])); //tf ~ term frequency
 	 
-	            double idf = (double) numberOfDocumentsInCorpus / (double) numberOfDocumentsInCorpusWhereKeyAppears;//idf ~ inverse document frequency
+	            double idf = (double) numberOfDoc / (double) docNumberWithKey;//idf ~ inverse document frequency
 	 
 	            double tfIdf = tf*Math.log(idf);
 	 
