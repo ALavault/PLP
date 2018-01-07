@@ -5,6 +5,7 @@ import java.io.*;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.*;
+import org.apache.hadoop.fs.FileSystem;
 
 
 
@@ -12,12 +13,17 @@ public class CompterLigneFile {
 
 	public static void main(String[] args) throws IOException {
 
-		String localSrc = "/home/util/Documents/LAB_2_Hadoop/Data/isd-history.txt";
+		if (args.length != 1) {
+			System.out.println("Usage: [input]");
+			System.exit(-1);
+		}
+		String localSrc = args[0];
+		Path src = new Path(localSrc);
 		//Open the file
 		Configuration conf = new Configuration();
 		FileSystem fs = FileSystem.get(conf);
-		InputStream in = new BufferedInputStream(new FileInputStream(localSrc));
-
+		//InputStream in = new BufferedInputStream(new FileInputStream(src));
+		FSDataInputStream in = fs.open(src);
 		try{
 			InputStreamReader isr = new InputStreamReader(in);
 			BufferedReader br = new BufferedReader(isr);
@@ -45,12 +51,12 @@ public class CompterLigneFile {
 				System.out.println(altitude);
 				line = br.readLine();
 
-				
-				
 
 
 
-				
+
+
+
 
 
 			}
@@ -62,6 +68,6 @@ public class CompterLigneFile {
 		}
 
 	}	
-	
+
 }
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.11.11)  7 JAN 2018 12:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.11.11)  7 JAN 2018 13:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -533,7 +533,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <8> on input line 12.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 12.
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 39.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 25.
 
 (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -541,12 +541,12 @@ File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 106.
+(Font)              <10> on input line 116.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 106.
+(Font)              <7> on input line 116.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 106.
- [2] (./report.aux) ) 
+(Font)              <5> on input line 116.
+ [2] [3] (./report.aux) ) 
 Here is how much of TeX's memory you used:
  2525 strings out of 493013
  33048 string characters out of 6135681
@@ -555,18 +555,18 @@ Here is how much of TeX's memory you used:
  50552 words of font info for 43 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  29i,6n,30p,221b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/s
-hare/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
--ec.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fo
-nts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.p
-fb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/ty
-pe1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr
-/share/texmf/fonts/type1/public/lm/lmro10.pfb></usr/share/texmf/fonts/type1/pub
-lic/lm/lmtt10.pfb>
-Output written on report.pdf (2 pages, 187420 bytes).
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/u
+sr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/l
+m/lm-ec.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texm
+f/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi
+10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/font
+s/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb><
+/usr/share/texmf/fonts/type1/public/lm/lmro10.pfb></usr/share/texmf/fonts/type1
+/public/lm/lmtt10.pfb>
+Output written on report.pdf (3 pages, 190908 bytes).
 PDF statistics:
- 48 PDF objects out of 1000 (max. 8388607)
- 35 compressed objects within 1 object stream
+ 51 PDF objects out of 1000 (max. 8388607)
+ 37 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
