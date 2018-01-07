@@ -10,7 +10,6 @@ import java.util.StringTokenizer;
 // To complete according to your problem
 public class PerDocWCMapper extends Mapper<LongWritable, Text, Text, Text> {
 	
-// Overriding of the map method
 @Override
 public void map(LongWritable keyE, Text valE, Context context) throws IOException, InterruptedException {
 	// keyE ~ Nombre -> Pas pertinent pour le problème

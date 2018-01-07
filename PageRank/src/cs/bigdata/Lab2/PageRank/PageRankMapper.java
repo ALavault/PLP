@@ -1,17 +1,13 @@
 package cs.bigdata.Lab2.PageRank;
 
 
-import org.apache.hadoop.mapreduce.Job;  
 import org.apache.hadoop.io.*;        
 import org.apache.hadoop.mapreduce.Mapper;
 import java.io.IOException;
-import java.util.StringTokenizer;
 
 // To complete according to your problem
 public class PageRankMapper extends Mapper<LongWritable, Text, Text, Text> {
 
-	private final static IntWritable one = new IntWritable(1);
-	private Text word = new Text();
 	// Overriding of the map method
 	@Override
 	protected void map(LongWritable keyE, Text valE, Context context) throws IOException,InterruptedException

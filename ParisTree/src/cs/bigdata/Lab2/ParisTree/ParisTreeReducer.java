@@ -1,23 +1,17 @@
 package cs.bigdata.Lab2.ParisTree;
 
-import org.apache.hadoop.mapreduce.Job;  
 import org.apache.hadoop.io.*;
 import org.apache.hadoop.mapreduce.Reducer;
 import java.io.IOException;
-import java.util.Iterator;
 
 
 public class ParisTreeReducer extends Reducer<Text, Text, Text, Text> {
-
-	private IntWritable totalWordCount = new IntWritable();
 
 	@Override
 	public void reduce(final Text key, final Iterable<Text> values,
 			final Context context) throws IOException, InterruptedException {
 
 		double output[] = {0, 0};
-		Iterator<Text> iterator = values.iterator();
-
 		for(Text value : values) {
 			String valueString = value.toString();
 			String[] split = valueString.split("@");

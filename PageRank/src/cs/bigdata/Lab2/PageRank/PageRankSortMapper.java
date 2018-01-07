@@ -16,7 +16,7 @@ public class PageRankSortMapper extends Mapper<LongWritable, Text, Text, Text> {
 	@Override
 	protected void map(LongWritable keyE, Text valE, Context context) throws IOException,InterruptedException
 	{
-		// Si on n'a pas un commentaire..
+		// Si on n'a pas un commentaire... ie #...
 		if (valE.charAt(0) != '#') {
 			String[] tabIndex = valE.toString().split("\t");
 			String parent = tabIndex[0];

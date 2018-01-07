@@ -18,18 +18,6 @@ public class PerDocWCReducer extends Reducer<Text, Text, Text, Text > {
     	
         int docLength = 0;
 
-        /*
-        Map<String, Integer> tempCounter = new HashMap<String, Integer>();
-        for (Text val : valE) {
-            String[] wordCounter = val.toString().split("=");
-            tempCounter.put(wordCounter[0], Integer.valueOf(wordCounter[1]));
-            docLength += Integer.parseInt(val.toString().split("=")[1]);
-        }
-        for (String wordKey : tempCounter.keySet()) {
-            context.write(new Text(wordKey + "@" + keyE.toString()), new Text(tempCounter.get(wordKey) + "/" + docLength));
-        	
-        }
-        */
         Hashtable<String, Integer> tmpWordCounter = new Hashtable(); // Structure de dictionnaire, garantit l'unicité des clés
         for (Text value : valE) { // On itère sur les différentes valeurs d'une clé
             String[] valueSplit = value.toString().split("="); // Rappel (key, value) ~ (docid, word=wordcount)

@@ -1,16 +1,10 @@
 package cs.bigdata.Lab2.TfIdf;
 
-import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.io.*;
-import org.apache.hadoop.mapred.JobConf;
 import org.apache.hadoop.mapreduce.Reducer;
-import org.apache.hadoop.mapreduce.Reducer.Context;
-
 import java.io.IOException;
-import java.math.*;
 import java.util.Hashtable;
-import java.util.Iterator;
 
 
 public class PerWordDCReducer extends Reducer<Text, Text, Text, Text> {
@@ -21,7 +15,6 @@ public class PerWordDCReducer extends Reducer<Text, Text, Text, Text> {
 			Configuration conf = context.getConfiguration();
 			String strProp = conf.get("numberOfDocs");
 			Integer numberOfDoc = Integer.valueOf(strProp);
-			// total frequency of this word
 	        int docNumberWithKey = 0;
 	        Hashtable<String, String> tmpFreq = new Hashtable<String, String>();
 	        for (Text val : values) {

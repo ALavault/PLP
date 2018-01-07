@@ -36,7 +36,6 @@ public class CompterLigneFile {
 			}
 			line = br.readLine();
 
-			int i = 0;
 			while (line !=null){
 				// Process of the current line
 				// go to the next line
