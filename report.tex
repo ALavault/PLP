@@ -4,7 +4,7 @@
 \usepackage{lmodern}
 \usepackage[a4paper]{geometry}
 \usepackage{babel}
-
+\usepackage{hyperref}
 
 \title{PLP : rapport}
 \author{Antoine Lavault}
@@ -14,6 +14,10 @@
 \section*{Remarques préliminaires}
 
 Les implémentations proposées ont été testées avec Hadoop 2.8.3 sur une machine Ubuntu 17.04 : la machine virtuelle ne donnait pas satisfaction vu la configuration de la machine de test.
+
+De plus, le dépot Git à l'adresse \href{https://github.com/ALavault/PLP}{https://github.com/ALavault/PLP} présente tous les résultats obtenus pour la partie Map-Reduce/Hadoop.
+
+
 
 \section{Résultats}
 \subsection{Exploration de HDFS}
@@ -26,10 +30,13 @@ La commande
 hadoop jar yht.jar cs.bigdata.Tutorial2.CompterLigneFile [input] 
 \end{verbatim} 
 
-permet de lancer le jar
+permet de lancer le jar.
+
+Il est à noter que le programme est écrit pour ouvrir un et un seul fichier : donner simplement le dossier entraînera une erreur.
 
 \subsubsection{Affichage d'un fichier compact}
 
+Mêmes remarques que dans la partie précédente.
 
 
 
